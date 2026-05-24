@@ -19,6 +19,7 @@ func main() {
 	dsa.PostOrder(tree)
 	dsa.PreOrder(tree)
 	dsa.InOrder(tree)
+	dsa.TreeBfs(tree)
 }
 
 

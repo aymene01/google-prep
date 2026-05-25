@@ -23,3 +23,26 @@ func TraverseLinkedList[T any](head *ListNode[T]) {
 		curr = curr.next
 	}
 }
+
+func GetMiddleNode[T any](head *ListNode[T]) *ListNode[T] {
+	slow := head
+	fast := head
+
+	for fast != nil && fast.next != nil {
+		slow = slow.next
+		fast = fast.next.next
+
+		if slow == fast {
+			slow = head
+
+			for slow != fast {
+				slow = slow.next
+				fast = fast.next
+			}
+
+			return slow
+		}
+	}
+
+	return nil
+}

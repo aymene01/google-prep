@@ -24,7 +24,7 @@ func TraverseLinkedList[T any](head *ListNode[T]) {
 	}
 }
 
-func GetMiddleNode[T any](head *ListNode[T]) *ListNode[T] {
+func HasCycle[T any](head *ListNode[T]) *ListNode[T] {
 	slow := head
 	fast := head
 
